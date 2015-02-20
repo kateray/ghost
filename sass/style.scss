@@ -8,7 +8,7 @@ body {
 .glitch {
 	position: relative;
 }
-@keyframes noise-anim{
+@-webkit-keyframes "noise-anim"{
 	$steps:20;
 	@for $i from 0 through $steps{
 		#{percentage($i*(1/$steps))}{
@@ -25,10 +25,10 @@ body {
 	background:black;
 	overflow:hidden;
 	clip:rect(0,900px,0,0);
-	animation:noise-anim 2s infinite linear alternate-reverse;
+	-webkit-animation:noise-anim 2s infinite linear alternate-reverse;
 }
 
-@keyframes noise-anim-2{
+@-webkit-keyframes "noise-anim-2"{
 	$steps:20;
 	@for $i from 0 through $steps{
 		#{percentage($i*(1/$steps))}{
@@ -45,13 +45,13 @@ body {
 	background:black;
 	overflow:hidden;
 	clip:rect(0,900px,0,0);
-	animation:noise-anim-2 3s infinite linear alternate-reverse;
+	-webkit-animation:noise-anim-2 3s infinite linear alternate-reverse;
 }
 
 .glitch2 {
 	position: relative;
 }
-@keyframes noise-anim2{
+@-webkit-keyframes "noise-anim2"{
 	$steps:40;
 	@for $i from 0 through $steps{
 		#{percentage($i*(1/$steps))}{
@@ -69,10 +69,10 @@ body {
 	background:black;
 	overflow:hidden;
 	clip:rect(0,900px,0,0);
-	animation:noise-anim2 2s infinite linear alternate-reverse;
+	-webkit-animation:noise-anim2 2s infinite linear alternate-reverse;
 }
 
-@keyframes noise-anim-22{
+@-webkit-keyframes "noise-anim-22"{
 	$steps:40;
 	@for $i from 0 through $steps{
 		#{percentage($i*(1/$steps))}{
@@ -90,7 +90,7 @@ body {
 	background:black;
 	overflow:hidden;
 	clip:rect(0,900px,0,0);
-	animation:noise-anim-22 3s infinite linear alternate-reverse;
+	-webkit-animation:noise-anim-22 3s infinite linear alternate-reverse;
 }
 
 #typed-cursor {
