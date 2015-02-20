@@ -1,0 +1,13 @@
+doctype html
+html
+	head
+		title Ghost
+		link(rel='stylesheet', href='../styles/style.css')
+	body
+		h1
+			#sentence.glitch(data-text="#{sentence}") $ #{sentence}
+			span.glitch(data-text="$") $
+			span#typed-cursor.blinking |
+
+	script(src='scripts/jquery.js')
+	script(src='scripts/app.js')

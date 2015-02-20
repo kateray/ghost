@@ -1,0 +1,129 @@
+h1 { font-family: "Courier New", Courier, monospace; }
+
+body {
+	background-color: #000;
+	color: #00c211;
+}
+
+.glitch {
+	position: relative;
+}
+@-webkit-keyframes noise-anim{
+	$steps:20;
+	@for $i from 0 through $steps{
+		#{percentage($i*(1/$steps))}{
+			clip:rect(random(200)+px,9999px,random(100)+px,0);
+		}
+	}
+}
+.glitch:after{
+	content:attr(data-text);
+	position:absolute;
+	left:2px;
+	text-shadow:-1px 0 red;
+	top:0;
+	background:black;
+	overflow:hidden;
+	clip:rect(0,900px,0,0);
+	-webkit-animation:noise-anim 2s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes noise-anim-2{
+	$steps:20;
+	@for $i from 0 through $steps{
+		#{percentage($i*(1/$steps))}{
+			clip:rect(random(200)+px,9999px,random(100)+px,0);
+		}
+	}
+}
+.glitch:before{
+	content:attr(data-text);
+	position:absolute;
+	left:-2px;
+	text-shadow:1px 0 blue;
+	top:0;
+	background:black;
+	overflow:hidden;
+	clip:rect(0,900px,0,0);
+	-webkit-animation:noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+#typed-cursor {
+	font-weight: 100;
+	font-size: 30px;
+	color: black;
+}
+
+.slogan {
+	color: #2E3D48;
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	margin: -60px 0 0 0;
+	display: block;
+	width: 100%;
+}
+
+#typed-cursor {
+	color: #2E3D48;
+	font-weight: 100;
+	font-size: 1.3em;
+}
+
+#typed-cursor.blinking {
+	-webkit-animation: 1s blink step-end infinite;
+	-moz-animation: 1s blink step-end infinite;
+	-ms-animation: 1s blink step-end infinite;
+	-o-animation: 1s blink step-end infinite;
+	animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+	from,to {
+	color: transparent;
+	}
+	50% {
+		color: #00c211;
+	}
+
+}
+
+@-moz-keyframes blink {
+	from,to {
+	color: transparent;
+	}
+	50% {
+	color: #00c211;
+	}
+
+}
+
+@-webkit-keyframes "blink" {
+	from,to {
+	color: transparent;
+	}
+	50% {
+	color: #00c211;
+	}
+
+}
+
+@-ms-keyframes "blink" {
+	from,to {
+	color: transparent;
+	}
+	50% {
+	color: #00c211;
+	}
+
+}
+
+@-o-keyframes "blink" {
+	from,to {
+	color: transparent;
+	}
+	50% {
+	color: #00c211;
+	}
+}
